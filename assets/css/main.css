@@ -1,0 +1,33 @@
+header {
+  margin-top: 1.5rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  padding-left: 1rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding-right: 1rem;
+  box-shadow: 0 9px 7px rgba(0, 0, 0, 0.06);
+  border-radius: 30px;
+  width: 100%;
+  border: 1px solid #f7f7f7;
+  padding-bottom: 7px;
+}
+
+.logo-image {
+  height: 5rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  gap: 30px;
+}
