@@ -105,6 +105,7 @@ ul {
   background-color: #9333ea;
   color: #ffffff;
 }
+
 .pet-scroll-container {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; /* برای اسکرول نرم در iOS */
@@ -121,16 +122,30 @@ ul {
   padding: 0;
   margin: 0;
   scroll-snap-type: x mandatory; /* اختیاری: برای اسکرول اسنپ */
-  align-items: center;
+  align-items: center; /* همه آیتم‌ها در راستای عمودی وسط باشند */
 }
 
 .pet-item {
   flex: 0 0 auto;
-  scroll-snap-align: start; /* اختیاری */
+  scroll-snap-align: start; /* اختیاری: اسکرول اسنپ در شروع هر آیتم */
 }
 
+/* لینک دور عکس‌ها */
+.pet-link {
+  display: block;
+  border-radius: 12px; /* گوشه‌های گرد برای زیبایی */
+  overflow: hidden; /* مطمئن میشه که افکت فقط روی عکس باشه */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* انیمیشن برای هاور */
+}
+
+/* افکت هاور: کمی بزرگ‌تر و با سایه */
+.pet-link:hover {
+  transform: scale(1.05);
+}
+
+/* عکس‌ها داخل آیتم‌ها */
 .pet-item img {
   display: block; /* حذف فاصله baseline */
-  height: 500px; /* همه عکس‌ها رو هم‌ارتفاع کن (می‌تونی تغییر بدی) */
-  object-fit: contain; /* بدون کشیدگی در باکس جا بشه */
+  height: 500px; /* همه عکس‌ها هم‌ارتفاع میشن */
+  object-fit: contain; /* بدون کشیدگی در باکس جا بشن */
 }
