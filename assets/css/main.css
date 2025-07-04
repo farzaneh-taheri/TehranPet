@@ -117,10 +117,9 @@ ul {
 
 .pet-list {
   display: flex;
-  gap: 1rem;
+  gap: 50px;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 10px;
   scroll-snap-type: x mandatory; /* اختیاری: برای اسکرول اسنپ */
   align-items: center; /* همه آیتم‌ها در راستای عمودی وسط باشند */
 }
@@ -146,6 +145,178 @@ ul {
 /* عکس‌ها داخل آیتم‌ها */
 .pet-item img {
   display: block; /* حذف فاصله baseline */
-  height: 500px; /* همه عکس‌ها هم‌ارتفاع میشن */
+  height: 300px; /* همه عکس‌ها هم‌ارتفاع میشن */
   object-fit: contain; /* بدون کشیدگی در باکس جا بشن */
+}
+
+/* Special sales styling */
+
+/* Main section with gray background */
+.special-offer-section {
+  background-color: #f0f0f0; /* light gray background */
+  padding: 2rem;
+  position: relative; /* for positioning the purple banner absolutely inside */
+  border-radius: 40px;
+  display: flex; /* layout: products on left + banner on right */
+  height: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* Container to center content and use flexbox for two parts */
+.special-offer-container {
+  display: flex; /* arrange products and banner side by side */
+  flex: 1; /* take full available space */
+}
+
+/* Purple banner always sticks to the right side, full height of the section */
+.offer-banner {
+  width: 216px; /* fixed width */
+  background-color: #a200c7; /* purple color */
+  color: #fff;
+  border-radius: 37px;
+  text-align: center;
+  position: absolute; /* stick inside parent */
+  top: 0; /* from top of section */
+  right: 0; /* stick to right */
+  bottom: 0; /* stretch to bottom => full height of parent */
+  height: 100%; /* full height of .special-offer-section */
+  flex-shrink: 0; /* don’t shrink on small screens */
+  box-shadow: 0 2px 13px rgb(0, 0, 0);
+  z-index: 1;
+}
+
+/* Container for product list, takes remaining space on the left */
+.product-list-part {
+  flex: 1; /* fill remaining space */
+  display: flex;
+  flex-direction: column;
+  margin-right: 150px; /* leave space for the fixed purple banner on the right */
+  overflow: hidden;
+  width: 100vh;
+}
+
+/* "View all" link above product list */
+.view-all-link {
+  align-self: flex-start;
+  color: purple;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+.icon {
+  font-size: 1rem; /* اندازه آیکون */
+}
+
+/* Scrollable row of products */
+.product-list {
+  display: flex; /* بچه‌ها در یک خط قرار بگیرن */
+  gap: 1.5rem; /* فاصله بین کارت‌ها */
+  padding-bottom: 1rem; /* کمی فضای پایین برای زیبایی */
+  -webkit-overflow-scrolling: touch; /* برای اسکرول نرم تو iOS */
+  overflow-x: auto; /* اسکرول افقی فعال */
+  position: relative; /* برای قرار دادن آیکون در موقعیت درست */
+  padding-top: 1rem;
+}
+
+/* Hide scrollbar for Webkit browsers */
+.product-list::-webkit-scrollbar {
+  display: none; /* اسکرول‌بار مخفی بشه */
+}
+
+/* Single product card */
+.product-card {
+  flex: 0 0 auto; /* کارت‌ها جمع نشن، کنار هم باشن */
+  width: 208px;
+  height: 294px;
+  background-color: white;
+  border-radius: 37px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: space-between;
+  align-items: center;
+}
+/* بزرگ‌نمایی و سایه برای عکس هنگام هاور */
+.product-card:hover {
+  transform: scale(1.05); /* بزرگ‌نمایی کمی هنگام هاور */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* سایه بیشتر هنگام هاور */
+}
+
+/* Product image inside card */
+.product-card img {
+  max-width: 60%;
+  height: auto;
+  transition: transform 0.3s ease; /* انیمیشن برای عکس */
+  margin-top: 36px;
+  margin-bottom: -30px;
+}
+
+/* اگر موس رو روی تصویر ببره، کمی بزرگ بشه */
+.product-card:hover img {
+  transform: scale(1.1); /* بزرگ شدن عکس هنگام هاور */
+}
+
+/* Product title aligned to the right */
+.product-card h3 {
+  font-size: 1rem;
+  margin-top: -48px;
+  margin-bottom: -30px;
+  text-align: right; /* align text to the right */
+  width: 100%;
+}
+
+/* Row: price on the right, button on the left */
+.price-button-row {
+  display: flex;
+  justify-content: space-between; /* push items to edges */
+  align-items: center;
+  width: 100%;
+}
+
+/* Price text */
+.price {
+  color: #b000e1;
+  font-weight: bold;
+}
+
+/* Add to cart button */
+.add-to-cart {
+  background-color: #b000e1; /* purple button */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Icon inside banner */
+.offer-banner img {
+  width: 170px; /* size of bell icon */
+  margin-bottom: 0.5rem;
+  margin-top: -50px;
+}
+
+.offer-text img {
+  margin-top: -13px;
+  width: 150px;
+}
+
+.offer-text h2 {
+  margin-top: -10px;
+  font-weight: bold;
+}
+
+/* Divider line under product image */
+.divider-line {
+  width: 116%; /* full width */
+  height: 0.5px; /* thin line */
+  background-color: #ccc; /* light gray color */
+  margin: 0.5rem 0; /* space above/below */
 }
