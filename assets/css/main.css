@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Vazir", sans-serif;
+  direction: rtl;
 }
 
 /*header styling*/
@@ -319,4 +320,182 @@ ul {
   height: 0.5px; /* thin line */
   background-color: #ccc; /* light gray color */
   margin: 0.5rem 0; /* space above/below */
+}
+
+/* vet styling */
+
+/* Container for the whole section */
+.vet-section {
+  padding: 2rem;
+}
+
+/* Header part with title and button */
+.vet-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.vet-header img {
+  width: 70px;
+  padding-bottom: 20px;
+}
+
+.reserve-button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: #ffffff;
+  color: #9333ea;
+  font-weight: 700;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  margin-right: 1rem;
+}
+
+.reserve-button:hover {
+  border-color: #9333ea;
+  background-color: #9333ea;
+  color: #ffffff;
+}
+
+/* Tabs for filter buttons */
+.vet-tabs {
+  display: flex;
+  background-color: #eaeaea; /* پس‌زمینه خاکستری ملایم */
+  border-radius: 9999px;
+  padding: 0;
+  overflow: hidden;
+  margin: 1rem 0 3rem auto; /* بالا-راست-پایین-چپ: بزن به راست */
+  direction: rtl; /* تب‌ها راست‌چین شوند */
+}
+
+.tab {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 20px 50px; /* کمتر کن تا تب فعال کامل داخل container جا بشه */
+  border-radius: 9999px;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  height: 100%;
+  font-size: 25px;
+  width: 100%;
+}
+
+.tab.active {
+  background-color: #00c7f5;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* List of cards */
+.vet-cards {
+  display: flex;
+  overflow-x: auto;
+  padding: 1rem;
+  gap: 1rem;
+  list-style: none;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE و Edge */
+  scrollbar-width: none; /* Firefox */ /* Firefox */
+}
+
+.vet-card::-webkit-scrollbar {
+  display: none; /* Chrome و Safari */
+}
+
+.vet-card {
+  flex: 0 0 auto; /* نذار کش بیاد */
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: grab;
+  transition: box-shadow 0.3s;
+  width: 315px; /* تنظیم عرض مناسب */
+  height: 250px;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.vet-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Each card link fills the li */
+.vet-card-link {
+  display: flex; /* کل محتوا رو بگیره */
+  flex-direction: column; /* عکس بالا، محتوا پایین */
+  height: 100%;
+  width: 100%;
+  text-decoration: none; /* خط زیر لینک حذف بشه */
+  color: inherit;
+}
+
+/* Image on top of the card */
+.vet-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Content inside card */
+.vet-card-content {
+  padding: 10px 0.75rem;
+}
+
+/* Title */
+.vet-card-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0.25rem 0;
+}
+
+/* Rating stars */
+.vet-card-rating {
+  color: #ffc107; /* رنگ ستاره‌ها */
+  font-size: 1rem;
+  text-align: right;
+}
+
+.vet-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: rtl; /* برای راست‌چین کردن نوشته‌ها */
+}
+
+/* Footer part with price and label */
+.vet-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.price {
+  background: #f7f7f7;
+  color: black;
+  border-radius: 9999px;
+  padding: 6px 20px;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.price .currency {
+  font-size: 0.7rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: #555;
 }
