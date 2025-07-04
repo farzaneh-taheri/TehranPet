@@ -70,3 +70,67 @@ ul {
   color: #b000e1;
   font-weight: bold;
 }
+
+/*pet styling*/
+.pet-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.5rem; /* 24px */
+}
+.pet-text {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+  font-weight: 700;
+  text-align: right;
+  margin-right: 1rem; /* 16px */
+}
+.pet-button {
+  padding-left: 2rem; /* 32px */
+  padding-right: 2rem; /* 32px */
+  padding-top: 0.75rem; /* 12px */
+  padding-bottom: 0.75rem; /* 12px */
+  background-color: #ffffff;
+  color: #9333ea;
+  font-weight: 700;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  margin-right: 1rem; /* 16px */
+}
+.pet-button:hover {
+  border-color: #9333ea;
+  background-color: #9333ea;
+  color: #ffffff;
+}
+.pet-scroll-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* برای اسکرول نرم در iOS */
+}
+
+.pet-scroll-container::-webkit-scrollbar {
+  display: none; /* مخفی کردن اسکرول‌بار در مرورگرهایی که اسکرول‌بار نشون میدن */
+}
+
+.pet-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  scroll-snap-type: x mandatory; /* اختیاری: برای اسکرول اسنپ */
+  align-items: center;
+}
+
+.pet-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start; /* اختیاری */
+}
+
+.pet-item img {
+  display: block; /* حذف فاصله baseline */
+  height: 500px; /* همه عکس‌ها رو هم‌ارتفاع کن (می‌تونی تغییر بدی) */
+  object-fit: contain; /* بدون کشیدگی در باکس جا بشه */
+}
