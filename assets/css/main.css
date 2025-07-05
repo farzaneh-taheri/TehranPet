@@ -630,93 +630,162 @@ ul {
   background-color: #6e2c9f;
 }
 
-/* Footer Styling */
-.site-footer {
+/* footer styling */
+.footer {
   background-color: #fff;
-  padding: 2rem 5%;
   color: #333;
-  text-align: center;
   font-size: 0.9rem;
   border-top: 2px solid #f2f2f2;
+  direction: ltr;
+  box-shadow: 0 9px 7px rgba(0, 0, 0, 0.06);
+  border-radius: 30px;
+  border: 1px solid #f7f7f7;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
-/* Logo Section */
-.footer-logo {
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Footer Row Styling */
+.footer-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 100%;
   margin-bottom: 2rem;
 }
 
-.logo-left h1,
-.logo-right h1 {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #7f3fbf;
+.footer-left,
+.footer-right {
+  padding-top: 2rem;
 }
 
-.logo-left p {
-  font-size: 1rem;
-  color: #888;
+.footer-left {
+  padding-left: 5%;
 }
 
-.highlight {
-  color: #00c7f5; /* رنگ خاص برای قسمت highlight */
+.footer-right {
+  padding-right: 5%;
+  padding-top: 3rem;
+  text-align: right;
 }
 
-/* Contact Section */
-.footer-contact {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+.footer-middle {
+  padding-top: 3rem;
+  text-align: center;
 }
 
-.contact-info h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
+.footer-left,
+.footer-middle,
+.footer-right {
+  flex: 1;
 }
 
-.contact-info p {
+.footer-left img {
+  width: 150px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-left a {
   font-size: 1rem;
   color: #777;
 }
 
-/* Social Media Icons */
-.social-media {
-  display: flex;
-  gap: 1rem;
+.footer-middle h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.social-icon {
-  text-decoration: none;
+.footer-middle p {
   font-size: 1rem;
-  color: #7f3fbf;
+  color: #777;
 }
 
-.social-icon:hover {
+/* Styling for footer-right (Additional Links) */
+.footer-right .footer-row-right {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+.footer-right .contact-info,
+.footer-right .additional-links {
+  width: 35%; /* هر کدوم از این دو بخش نیمی از فضای ردیف رو می‌گیرند */
+}
+
+.contact-info {
+  padding-top: 10px;
+  text-align: right;
+}
+
+.contact-info h3 {
+  color: #00ccff;
+  padding-right: 10px;
+}
+
+.additional-links {
+  text-align: right;
+}
+
+.footer-right .additional-links h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #7f3fbf;
+  margin-bottom: 0.5rem;
+}
+
+.footer-right .additional-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-right .additional-links li {
+  font-size: 1rem;
+  color: #777;
+}
+
+.footer-right .additional-links li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-right .additional-links li a:hover {
   color: #00c7f5;
 }
 
-/* Footer Links */
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
+/* Footer line (separator) */
+.footer-line {
+  width: 100%;
+  border: 1px solid #f2f2f2;
+  margin-bottom: 2rem;
 }
 
-.footer-links a {
-  color: #7f3fbf;
+/* Second row styling (Social and Legal links) */
+.footer-row a {
   text-decoration: none;
-  font-size: 1rem;
+  color: #7f3fbf;
+  margin: 0 1rem;
 }
 
-.footer-links a:hover {
+.footer-row a:hover {
   color: #00c7f5;
 }
 
-/* Footer Bottom */
-.footer-bottom {
-  font-size: 0.8rem;
-  color: #888;
+/* Social media links in the middle column */
+.footer-middle .social-icon {
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+/* Styling for footer-right (Legal links) */
+.footer-right a {
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  color: #333333cf;
+  text-align: right;
 }
