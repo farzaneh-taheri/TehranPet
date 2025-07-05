@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Lalezar" /* "Baloo Bhaijaan 2" یا  "Vazirmatn" */, sans-serif;
+  font-family: "Vazirmatn", sans-serif;
   direction: rtl;
 }
 
@@ -34,11 +34,12 @@ nav {
 nav ul {
   display: flex;
   align-items: center;
+  padding-left: 33px;
 }
 
 ul {
   list-style-type: none;
-  gap: 30px;
+  gap: 36px;
 }
 
 /*hero styling*/
@@ -65,11 +66,25 @@ ul {
   text-align: center;
 }
 
+.hero-image a {
+  text-decoration: none;
+}
+
+.hero-image :hover {
+  transform: scale(1.1);
+}
+
 .hero-p {
   font-size: 30px;
   text-align: center;
-  color: #b000e1;
+  color: #000000;
   font-weight: bold;
+}
+
+.hero-p img {
+  margin-bottom: -4px;
+  margin-right: 8px;
+  width: 23px;
 }
 
 /*pet styling*/
@@ -80,19 +95,20 @@ ul {
   margin-bottom: 1.5rem; /* 24px */
 }
 .pet-text {
-  font-size: 1.5rem; /* 24px */
+  font-size: 30px;
   line-height: 2rem; /* 32px */
   font-weight: 700;
   text-align: right;
   margin-right: 1rem; /* 16px */
+  font-family: "Vazirmatn", sans-serif;
 }
 .pet-button {
   padding-left: 2rem; /* 32px */
   padding-right: 2rem; /* 32px */
   padding-top: 0.75rem; /* 12px */
   padding-bottom: 0.75rem; /* 12px */
-  background-color: #ffffff;
-  color: #9333ea;
+  background-color: #9333ea;
+  color: #ffffff;
   font-weight: 700;
   border-radius: 9999px;
   border: 2px solid transparent;
@@ -100,11 +116,13 @@ ul {
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   margin-right: 1rem; /* 16px */
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 23px;
 }
 .pet-button:hover {
   border-color: #9333ea;
-  background-color: #9333ea;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #9333ea;
 }
 
 .pet-scroll-container {
@@ -173,7 +191,7 @@ ul {
 /* Purple banner always sticks to the right side, full height of the section */
 .offer-banner {
   width: 216px; /* fixed width */
-  background-color: #a200c7; /* purple color */
+  background-color: #b000e1; /* purple color */
   color: #fff;
   border-radius: 37px;
   text-align: center;
@@ -192,7 +210,7 @@ ul {
   flex: 1; /* fill remaining space */
   display: flex;
   flex-direction: column;
-  margin-right: 150px; /* leave space for the fixed purple banner on the right */
+  margin-right: 201px; /* leave space for the fixed purple banner on the right */
   overflow: hidden;
   width: 100vh;
 }
@@ -200,7 +218,7 @@ ul {
 /* "View all" link above product list */
 .view-all-link {
   align-self: flex-start;
-  color: purple;
+  color: #b000e1;
   margin-bottom: 1rem;
   text-decoration: none;
   font-weight: bold;
@@ -269,6 +287,7 @@ ul {
   margin-bottom: -30px;
   text-align: right; /* align text to the right */
   width: 100%;
+  font-family: "Vazirmatn", sans-serif;
 }
 
 /* Row: price on the right, button on the left */
@@ -277,12 +296,6 @@ ul {
   justify-content: space-between; /* push items to edges */
   align-items: center;
   width: 100%;
-}
-
-/* Price text */
-.price {
-  color: #b000e1;
-  font-weight: bold;
 }
 
 /* Add to cart button */
@@ -295,6 +308,7 @@ ul {
   height: 30px;
   font-size: 1.2rem;
   cursor: pointer;
+  font-weight: 900;
 }
 
 /* Icon inside banner */
@@ -310,10 +324,20 @@ ul {
 }
 
 .offer-text h2 {
-  margin-top: -10px;
+  margin-top: -26px;
   font-weight: bold;
+  font-family: "Vazirmatn", sans-seriff;
+  font-size: 30px;
+  text-shadow: 0 2px 5px rgb(0, 0, 0);
 }
 
+.offer-text p {
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 25px;
+  margin-top: -2px;
+  font-weight: bold;
+  text-shadow: 0 2px 5px rgb(0, 0, 0);
+}
 /* Divider line under product image */
 .divider-line {
   width: 116%; /* full width */
@@ -336,6 +360,16 @@ ul {
   align-items: center;
   width: 100%;
   margin-bottom: 1.5rem;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+.vet-header h2 {
+  font-size: 30px;
+  line-height: 2rem;
+  font-weight: 700;
+  text-align: right;
+  margin-right: 1rem;
+  font-family: "Vazirmatn", sans-serif;
 }
 
 .vet-header img {
@@ -348,8 +382,8 @@ ul {
   padding-right: 2rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  background-color: #ffffff;
-  color: #9333ea;
+  background-color: #00c7f5;
+  color: #ffffff;
   font-weight: 700;
   border-radius: 9999px;
   border: 2px solid transparent;
@@ -357,12 +391,14 @@ ul {
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   margin-right: 1rem;
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 23px;
 }
 
 .reserve-button:hover {
-  border-color: #9333ea;
-  background-color: #9333ea;
-  color: #ffffff;
+  border-color: #00c7f5;
+  background-color: #ffffff;
+  color: #00c7f5;
 }
 
 /* Tabs for filter buttons */
@@ -374,6 +410,7 @@ ul {
   overflow: hidden;
   margin: 1rem 0 3rem auto; /* بالا-راست-پایین-چپ: بزن به راست */
   direction: rtl; /* تب‌ها راست‌چین شوند */
+  font-family: "Vazirmatn", sans-serif;
 }
 
 .tab {
@@ -382,13 +419,14 @@ ul {
   outline: none;
   padding: 20px 50px; /* کمتر کن تا تب فعال کامل داخل container جا بشه */
   border-radius: 9999px;
-  font-weight: bold;
+  font-weight: 900;
   color: #666;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
   height: 100%;
   font-size: 25px;
   width: 100%;
+  font-family: "Vazirmatn", sans-serif;
 }
 
 .tab.active {
@@ -402,7 +440,7 @@ ul {
   display: flex;
   overflow-x: auto;
   padding: 1rem;
-  gap: 1rem;
+  gap: 2rem;
   list-style: none;
   scroll-behavior: smooth;
   -ms-overflow-style: none; /* IE و Edge */
@@ -416,7 +454,7 @@ ul {
 .vet-card {
   flex: 0 0 auto; /* نذار کش بیاد */
   background: #fff;
-  border-radius: 16px;
+  border-radius: 38px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: grab;
@@ -424,7 +462,7 @@ ul {
   width: 315px; /* تنظیم عرض مناسب */
   height: 250px;
   position: relative;
-  padding-bottom: 4px;
+  padding-bottom: 18px;
 }
 
 .vet-card:hover {
@@ -459,6 +497,7 @@ ul {
   font-size: 0.9rem;
   font-weight: bold;
   margin: 0.25rem 0;
+  font-family: "Vazirmatn", sans-serif;
 }
 
 /* Rating stars */
@@ -486,19 +525,29 @@ ul {
 .price {
   background: #f7f7f7;
   color: black;
-  border-radius: 9999px;
+  border-radius: 50px;
   padding: 6px 20px;
   font-size: 0.8rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 14%);
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 900;
+  width: 72px;
 }
 
 .price .currency {
+  font-size: 0.7rem;
+  color: #b000e1;
+}
+
+.price .currency-vet {
+  color: #00ccff;
   font-size: 0.7rem;
 }
 
 .label {
   font-size: 0.75rem;
   color: #555;
+  font-family: "Vazirmatn", sans-serif;
 }
 
 /*online styling*/
@@ -509,13 +558,14 @@ ul {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+  margin-bottom: 140px;
 }
 /* Section Header */
 .section-header {
   display: flex;
   justify-content: space-between; /* قرار دادن آیکون استتوسکوپ و عنوان کنار هم */
   align-items: center; /* تراز عمودی */
-  margin-bottom: -27px;
+  margin-bottom: -6px;
 }
 
 .section-title {
@@ -524,24 +574,30 @@ ul {
 }
 
 .section-title h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
   margin: 0; /* حذف فاصله‌های اضافی */
+  font-size: 30px;
+  line-height: 2rem;
+  font-weight: 700;
+  text-align: right;
+  margin-right: 1rem;
+  font-family: "Vazirmatn", sans-serif;
 }
 
 .icons {
   display: flex;
   gap: 1rem; /* فاصله بین آیکون‌ها */
   position: relative; /* برای تغییر موقعیت آیکون */
+  width: 31px;
 }
 
 .message-icon {
   margin-left: auto; /* آیکون پیام رو از سمت چپ صفحه جدا می‌کنه */
+  width: 77px;
 }
 
 .icons img {
   position: absolute;
-  top: -172px;
+  top: -158px;
   left: 33px;
   z-index: 1;
   width: 366px;
@@ -563,7 +619,7 @@ ul {
   transition: transform 0.3s;
   z-index: 2;
   flex: 0 0 auto; /* این باعث میشه که کارت‌ها فضای بیشتر بگیرند */
-  width: 335px; /* یا هر عرضی که می‌خواهید */
+  width: 371px; /* یا هر عرضی که می‌خواهید */
   margin-left: 8px;
   margin-right: 8px;
   margin-top: 20px;
@@ -599,6 +655,7 @@ ul {
   font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  font-family: "Vazirmatn", sans-serif;
 }
 
 .rating {
@@ -609,6 +666,7 @@ ul {
 .additional-fee {
   font-size: 1rem;
   color: #333;
+  font-family: "Vazirmatn", sans-serif;
 }
 
 .start-consultation-btn {
@@ -624,6 +682,7 @@ ul {
   margin-bottom: 30px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  font-family: "Vazirmatn", sans-serif;
 }
 
 .start-consultation-btn:hover {
@@ -687,23 +746,35 @@ ul {
 }
 
 .footer-left img {
-  width: 150px;
+  width: 215px;
   margin-bottom: 0.5rem;
+  margin-left: 69px;
 }
 
 .footer-left a {
   font-size: 1rem;
   color: #777;
+  font-family: "Vazirmatn", sans-serif;
 }
 
 .footer-middle h3 {
   font-size: 1.2rem;
   font-weight: bold;
+  font-family: "Vazirmatn", sans-serif;
 }
 
-.footer-middle p {
+.footer-left p {
   font-size: 1rem;
   color: #777;
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 900;
+}
+
+.footer-left p.copyright {
+  font-size: 1rem;
+  color: #777;
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 400;
 }
 
 /* Styling for footer-right (Additional Links) */
@@ -726,10 +797,12 @@ ul {
 .contact-info h3 {
   color: #00ccff;
   padding-right: 10px;
+  font-family: "Vazirmatn", sans-serif;
 }
 
 .additional-links {
   text-align: right;
+  font-family: "Vazirmatn", sans-serif;
 }
 
 .footer-right .additional-links h3 {
@@ -737,25 +810,32 @@ ul {
   font-weight: bold;
   color: #7f3fbf;
   margin-bottom: 0.5rem;
+  font-family: "Vazirmatn", sans-serif !important;
 }
 
 .footer-right .additional-links ul {
   list-style: none;
   padding: 0;
+  font-family: "Vazirmatn", sans-serif !important;
 }
 
 .footer-right .additional-links li {
   font-size: 1rem;
   color: #777;
+  font-family: "Vazirmatn", sans-serif !important;
 }
 
 .footer-right .additional-links li a {
   text-decoration: none;
   color: inherit;
+  font-family: "Vazirmatn", sans-serif !important;
 }
 
 .footer-right .additional-links li a:hover {
   color: #00c7f5;
+}
+.highlight {
+  font-family: "Vazirmatn", sans-serif !important;
 }
 
 /* Footer line (separator) */
